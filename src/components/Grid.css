@@ -2,18 +2,6 @@ body {
   margin: 0;
 }
 
-.container {
-  display: grid;
-  background: lightgray;
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20% 1fr;
-  grid-template-areas:
-    "header header"
-    "editor previewer";
-}
-
 .title {
   margin: 0;
   background: green;
@@ -22,16 +10,29 @@ body {
   grid-area: header;
 }
 
+.container {
+  background: lightgray;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
 .editor {
   background: blue;
   color: white;
   text-align: center;
-  grid-area: editor;
+  flex: 1 1 auto;
 }
 
 .previewer {
   background: red;
   color: white;
   text-align: center;
-  grid-area: previewer;
+  flex: 1 1 auto;
+}
+
+.handler {
+  width: 10px;
+  flex: 0 0 auto;
+  cursor: ew-resize;
 }
