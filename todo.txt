@@ -42,6 +42,10 @@ Ideas: Make buttons aligned with previewer and editor.
 Questions: How to create a dragbar?
 Complete? No
 
+Task: Make a dragbar
+Ideas: https://stackoverflow.com/questions/46931103/making-a-dragbar-to-resize-divs-inside-css-grids
+Questions: 
+Complete? No
 
 Task: Make a copy text to clipboard button
 Ideas: Lower priority.
