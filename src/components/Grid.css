@@ -1,17 +1,21 @@
+body {
+  margin: 0;
+}
+
 .container {
   display: grid;
   background: lightgray;
   width: 100vw;
   height: 100vh;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 25% 1fr;
-  grid-gap: 10px;
+  grid-template-rows: 20% 1fr;
   grid-template-areas:
     "header header"
     "editor previewer";
 }
 
 .title {
+  margin: 0;
   background: green;
   color: white;
   text-align: center;
