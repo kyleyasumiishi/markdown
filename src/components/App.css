@@ -7,21 +7,20 @@ body {
 
 .header {
   margin: 0;
-  background: green;
+  background: #292323;
   color: white;
   text-align: center;
   width: 100%;
-  height: 10vh;
+  height: 7vh;
   min-height: 40px;
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
 }
 
-.header-left {
-  margin: 10px;
-}
+.header-left,
 .header-right {
-  margin: 10px 40px 10px 10px;
+  margin: 0;
 }
 
 .header-left h1 {
@@ -32,11 +31,12 @@ body {
 
 .header-right ul {
   margin: 0;
+  white-space: nowrap;
 }
 
 .header-right li {
   list-style-type: none;
-  float: left;
+  display: inline-block;
   margin-right: 40px;
   padding-top: 10px;
 }
@@ -53,6 +53,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  color: #889e86;
+}
+
 .clear-btn {
   padding: 0;
 }
@@ -60,7 +64,8 @@ button {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: lightgray;
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.49);
   z-index: 1;
   min-width: 100px;
 }
@@ -75,14 +80,14 @@ button {
 }
 
 .dropdown-content a:hover {
-  background-color: black;
+  background-color: #232329;
   color: white;
 }
 
 .container {
   background: lightgray;
   width: 100%;
-  height: 90vh;
+  height: 93vh;
   display: flex;
 }
 
@@ -94,16 +99,17 @@ button {
 }
 
 .editor {
-  background: blue;
-  color: white;
+  background-color: #889e86;
+  color: #232329;
 }
 
 .previewer {
-  background: red;
-  color: white;
+  background: lightgray;
+  color: #232329;
 }
 
 .handler {
+  background-color: #292323;
   width: 10px;
   flex: 0 0 auto;
   cursor: col-resize;
