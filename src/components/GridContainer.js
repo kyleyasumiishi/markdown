@@ -13,24 +13,10 @@ class GridContainer extends Component {
   }
 
   handleMouseDown(event) {
-    console.log("mousedown");
     if (event.target.className === "handler") {
       this.setState({
         isHandlerDragging: true
       });
-      console.log("Mousedown on handler");
-    }
-  }
-
-  handleMouseMove(event) {
-    if (this.state.isHandlerDragging) {
-      const container = event.target.parentNode;
-      console.log(container);
-      const containerOffsetLeft = container.offsetLeft;
-      const pointerRelativeXpos = event.clientX - containerOffsetLeft;
-      const editor = container.querySelector(".editor");
-      editor.style.width = pointerRelativeXpos - 10 + "px";
-      editor.style.flexGrow = 0;
     }
   }
 
@@ -38,6 +24,16 @@ class GridContainer extends Component {
     this.setState({
       isHandlerDragging: false
     });
+  }
+
+  handleMouseMove(event) {
+    if (this.state.isHandlerDragging) {
+      const container = event.target.parentNode;
+      const editor = container.querySelector(".editor");
+      let pointerRelativeXpos = event.clientX;
+      editor.style.width = pointerRelativeXpos - 5 + "px";
+      editor.style.flexGrow = 0;
+    }
   }
 
   render() {

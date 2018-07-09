@@ -1,0 +1,46 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin: 0;
+  background: green;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  min-height: 120px;
+}
+
+.container {
+  background: lightgray;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+}
+
+.panel {
+  text-align: center;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  min-width: 150px;
+}
+
+.editor {
+  background: blue;
+  color: white;
+}
+
+.previewer {
+  background: red;
+  color: white;
+}
+
+.handler {
+  width: 10px;
+  flex: 0 0 auto;
+  cursor: ew-resize;
+}
