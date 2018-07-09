@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
-import GridContainer from "./GridContainer";
+import PanelContainer from "./PanelContainer";
+import HeaderContainer from "./HeaderContainer";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <GridContainer />
+        <HeaderContainer />
+        <PanelContainer />
       </div>
     );
   }

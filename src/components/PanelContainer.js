@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Grid from "./Grid";
+import Panel from "./Panel";
 
-class GridContainer extends Component {
+class PanelContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +38,7 @@ class GridContainer extends Component {
 
   render() {
     return (
-      <Grid
+      <Panel
         mousedown={this.handleMouseDown}
         mousemove={this.handleMouseMove}
         mouseup={this.handleMouseUp}
@@ -47,4 +47,4 @@ class GridContainer extends Component {
   }
 }
 
-export default GridContainer;
+export default PanelContainer;
