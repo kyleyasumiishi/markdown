@@ -11,14 +11,82 @@ body {
   color: white;
   text-align: center;
   width: 100%;
-  height: 20vh;
-  min-height: 120px;
+  height: 10vh;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  margin: 10px;
+}
+.header-right {
+  margin: 10px 40px 10px 10px;
+}
+
+.header-left h1 {
+  margin: 0 0 0 10px;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.header-right ul {
+  margin: 0;
+}
+
+.header-right li {
+  list-style-type: none;
+  float: left;
+  margin-right: 40px;
+  padding-top: 10px;
+}
+
+/* Modified drop-down navbar code from W3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
+
+button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.clear-btn {
+  padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  min-width: 100px;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  float: none;
+  color: black;
+  text-align: left;
+  padding: 5px;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
 }
 
 .container {
   background: lightgray;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
 }
 
@@ -42,5 +110,5 @@ body {
 .handler {
   width: 10px;
   flex: 0 0 auto;
-  cursor: ew-resize;
+  cursor: col-resize;
 }
