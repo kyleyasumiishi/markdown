@@ -82,8 +82,9 @@ One of my primary goals for each freeCodeCamp project and set of challenges is t
 Here are a few <em>new concepts</em> I learned and practiced by creating this React + Redux app:
 
 - ESLint and Prettier
-- CSS Grid
+- Creating a dragbar to dynamically resize HTML elements
 - Redux
+- Separating presentational and container components in React
 
 ## Technologies Used
 
