@@ -98,13 +98,23 @@ button:hover {
   min-width: 150px;
 }
 
+.panel-heading {
+  background-color: #292323;
+  border: 2px lightgray solid;
+  color: white;
+}
+
+.panel-heading::selection {
+  background: inherit;
+}
+
 .editor {
   background-color: #889e86;
   color: #232329;
 }
 
 .previewer {
-  background: lightgray;
+  background: white;
   color: #232329;
 }
 
