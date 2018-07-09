@@ -57,10 +57,6 @@ button {
   padding: 0;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;

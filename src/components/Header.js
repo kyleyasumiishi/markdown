@@ -13,7 +13,11 @@ const Header = props => {
           </li>
           <li>
             <div className="dropdown">
-              <button className="dropdown-btn" href="#">
+              <button
+                className="dropdown-btn"
+                onClick={props.onbuttonclick}
+                href="#"
+              >
                 Options
               </button>
               <div className="dropdown-content">
@@ -26,7 +30,11 @@ const Header = props => {
           </li>
           <li>
             <div className="dropdown">
-              <button className="dropdown-btn" href="#">
+              <button
+                className="dropdown-btn"
+                onClick={props.onbuttonclick}
+                href="#"
+              >
                 Themes
               </button>
               <div className="dropdown-content">
