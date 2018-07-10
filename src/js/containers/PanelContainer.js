@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Panel from "./Panel";
+import Panel from "../components/Panel";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { handleMouseDown, handleMouseUp } from "../actions/handlerActions";

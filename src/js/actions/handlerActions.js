@@ -1,6 +1,4 @@
-const MOUSEDOWN = "MOUSEDOWN";
-const MOUSEMOVE = "MOUSEMOVE";
-const MOUSEUP = "MOUSEUP";
+import { MOUSEDOWN, MOUSEUP } from "../../constants";
 
 export const handleMouseDown = event => {
   return {

@@ -1,10 +1,9 @@
+import { MOUSEDOWN, MOUSEUP } from "../../constants";
+
 export default function(state = false, action) {
   switch (action.type) {
     case MOUSEDOWN:
-      if (action.payload.target.classname === "handler") {
-        return true;
-      }
-      break;
+      return true;
     case MOUSEUP:
       return false;
     default:
