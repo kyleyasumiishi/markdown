@@ -8,11 +8,12 @@ const Panel = props => {
       onMouseUp={props.mouseup}
       onMouseMove={props.mousemove}
     >
-      <div className="panel editor">
+      <div id="editor" className="panel">
         <div className="panel-heading">Editor</div>
+        <textarea className="editor-text" />
       </div>
       <div className="handler" onMouseDown={props.mousedown} />
-      <div className="panel previewer">
+      <div id="previewer" className="panel">
         <div className="panel-heading">Previewer</div>
       </div>
     </div>

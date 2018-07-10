@@ -28,8 +28,7 @@ class PanelContainer extends Component {
 
   handleMouseMove(event) {
     if (this.state.isHandlerDragging) {
-      const container = event.target.parentNode;
-      const editor = container.querySelector(".editor");
+      const editor = document.getElementById("editor");
       let pointerRelativeXpos = event.clientX;
       editor.style.width = pointerRelativeXpos - 5 + "px";
       editor.style.flexGrow = 0;

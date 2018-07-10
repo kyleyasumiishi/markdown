@@ -102,18 +102,36 @@ button:hover {
   background-color: #292323;
   border: 2px lightgray solid;
   color: white;
+  height: 5%;
+  box-sizing: border-box;
 }
 
 .panel-heading::selection {
   background: inherit;
 }
 
-.editor {
+#editor {
   background-color: #889e86;
   color: #232329;
 }
 
-.previewer {
+.editor-text {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 95%;
+  width: 100%;
+  background-color: inherit;
+  resize: none;
+  font-size: 1rem;
+}
+
+.editor-text:focus {
+  outline: none;
+  border: none;
+}
+
+#previewer {
   background: white;
   color: #232329;
 }
