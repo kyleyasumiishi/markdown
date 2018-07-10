@@ -104,6 +104,8 @@ button:hover {
   color: white;
   height: 5%;
   box-sizing: border-box;
+  min-height: 28px;
+  padding: 3px;
 }
 
 .panel-heading::selection {
