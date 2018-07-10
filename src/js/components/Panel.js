@@ -15,7 +15,7 @@ const Panel = props => {
       <div className="handler" onMouseDown={props.mousedown} />
       <div id="previewer" className="panel">
         <div className="panel-heading">Previewer</div>
-        {/* <div className="previewer-output" /> */}
+        <div className="previewer-output">{props.output}</div>
       </div>
     </div>
   );

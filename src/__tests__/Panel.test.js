@@ -28,7 +28,7 @@ describe("PanelContainer", () => {
       expect(handleMouseUp).toHaveBeenCalledTimes(1);
     });
   });
-  describe("rendered previewer div", () => {
+  describe("rendered editor div", () => {
     it("should execute handleTextInput", () => {
       const handleTextInput = jest.fn();
       const wrapper = shallow(<Panel onchange={handleTextInput} />);

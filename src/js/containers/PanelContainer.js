@@ -27,6 +27,7 @@ class PanelContainer extends Component {
         mousemove={this.handleMouseMove}
         mouseup={this.props.handleMouseUp}
         onchange={this.props.handleTextInput}
+        output={this.props.output}
       />
     );
   }
@@ -34,7 +35,8 @@ class PanelContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    isHandlerDragging: state.isHandlerDragging
+    isHandlerDragging: state.isHandlerDragging,
+    output: state.textInput
   };
 }
 

@@ -16,4 +16,13 @@ describe("handleTextInput", () => {
     expect(typeof afterState).toEqual("string");
     expect(afterState).toEqual("Hello world");
   });
+  it("sets state to the payload string", () => {
+    const beforeState = "";
+    const action = {
+      type: UPDATE_TEXT,
+      payload: "Hello world"
+    };
+    const afterState = handleTextInput(beforeState, action);
+    expect(afterState).toEqual("Hello world");
+  });
 });
