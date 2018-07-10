@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import PanelContainer from "./PanelContainer";
-import HeaderContainer from "./HeaderContainer";
+import PanelContainer from "../containers/PanelContainer";
+import HeaderContainer from "../containers/HeaderContainer";
 
 class App extends Component {
   render() {

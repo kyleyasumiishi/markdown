@@ -1,5 +1,5 @@
 import React from "react";
-import "./PanelContainer";
+import "../containers/PanelContainer";
 
 const Panel = props => {
   return (
