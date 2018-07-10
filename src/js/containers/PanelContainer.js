@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Panel from "../components/Panel";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import { handleTextInput } from "../actions/handleTextInput";
 import { handleMouseDown, handleMouseUp } from "../actions/handlerActions";
 
 class PanelContainer extends Component {
@@ -25,6 +26,7 @@ class PanelContainer extends Component {
         mousedown={this.props.handleMouseDown}
         mousemove={this.handleMouseMove}
         mouseup={this.props.handleMouseUp}
+        onchange={this.props.handleTextInput}
       />
     );
   }
@@ -40,7 +42,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       handleMouseDown: handleMouseDown,
-      handleMouseUp: handleMouseUp
+      handleMouseUp: handleMouseUp,
+      handleTextInput: handleTextInput
     },
     dispatch
   );

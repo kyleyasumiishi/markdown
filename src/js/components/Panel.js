@@ -10,11 +10,12 @@ const Panel = props => {
     >
       <div id="editor" className="panel">
         <div className="panel-heading">Editor</div>
-        <textarea className="editor-text" />
+        <textarea className="editor-text" onChange={props.onchange} />
       </div>
       <div className="handler" onMouseDown={props.mousedown} />
       <div id="previewer" className="panel">
         <div className="panel-heading">Previewer</div>
+        {/* <div className="previewer-output" /> */}
       </div>
     </div>
   );
