@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/Header";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { handleOptionSelect } from "../actions/handleOptionSelect";
+import { selectOption } from "../actions/selectOption";
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class HeaderContainer extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      handleOptionSelect: handleOptionSelect
+      handleOptionSelect: selectOption
     },
     dispatch
   );

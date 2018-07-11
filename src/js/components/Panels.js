@@ -1,7 +1,7 @@
 import React from "react";
-import "../containers/PanelContainer";
+import "../containers/PanelsContainer";
 
-const Panel = props => {
+const Panels = props => {
   return (
     <div
       className="container"
@@ -13,7 +13,7 @@ const Panel = props => {
         <textarea
           className="editor-text"
           onChange={props.onchange}
-          value={props.output}
+          value={props.input}
         />
       </div>
       <div className="handler" onMouseDown={props.mousedown} />
@@ -28,4 +28,4 @@ const Panel = props => {
   );
 };
 
-export default Panel;
+export default Panels;

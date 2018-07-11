@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import HandlerReducer from "./handlerReducer";
-import HandleTextInputReducer from "./handleTextInputReducer";
+import dragReducer from "./dragReducer";
+import editReducer from "./editReducer";
 
 const allReducers = combineReducers({
-  isHandlerDragging: HandlerReducer,
-  textInput: HandleTextInputReducer
+  isHandlerDragging: dragReducer,
+  input: editReducer
 });
 
 export default allReducers;

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Panel from "../components/Panel";
+import Panels from "../components/Panels";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { handleTextInput } from "../actions/handleTextInput";
-import { handleMouseDown, handleMouseUp } from "../actions/handlerActions";
+import { edit } from "../actions/edit";
+import { handleMouseDown, handleMouseUp } from "../actions/drag";
 const marked = require("marked");
 
-class PanelContainer extends Component {
+class PanelsContainer extends Component {
   constructor(props) {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -24,18 +24,18 @@ class PanelContainer extends Component {
   }
 
   convertMarkdownToHTML() {
-    return { __html: marked(this.props.output) };
+    return { __html: marked(this.props.input) };
   }
 
   render() {
     return (
-      <Panel
+      <Panels
         mousedown={this.props.handleMouseDown}
         mousemove={this.handleMouseMove}
         mouseup={this.props.handleMouseUp}
         onchange={this.props.handleTextInput}
         innerHTML={this.convertMarkdownToHTML()}
-        output={this.props.output}
+        input={this.props.input}
       />
     );
   }
@@ -44,7 +44,7 @@ class PanelContainer extends Component {
 function mapStateToProps(state) {
   return {
     isHandlerDragging: state.isHandlerDragging,
-    output: state.textInput
+    input: state.input
   };
 }
 
@@ -53,7 +53,7 @@ function mapDispatchToProps(dispatch) {
     {
       handleMouseDown: handleMouseDown,
       handleMouseUp: handleMouseUp,
-      handleTextInput: handleTextInput
+      handleTextInput: edit
     },
     dispatch
   );
@@ -62,4 +62,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PanelContainer);
+)(PanelsContainer);
