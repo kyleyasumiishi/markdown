@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { selectOption } from "../actions/selectOption";
+import { clear } from "../actions/clear";
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class HeaderContainer extends Component {
         <Header
           onbuttonclick={this.handleButtonClick}
           onselectoption={this.props.handleOptionSelect}
+          onclear={this.props.clearEditor}
         />
       </div>
     );
@@ -41,7 +43,8 @@ class HeaderContainer extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      handleOptionSelect: selectOption
+      handleOptionSelect: selectOption,
+      clearEditor: clear
     },
     dispatch
   );

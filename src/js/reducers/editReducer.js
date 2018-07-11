@@ -1,4 +1,4 @@
-import { UPDATE_TEXT, UPDATE_OPTION } from "../../constants";
+import { UPDATE_TEXT, UPDATE_OPTION, CLEAR } from "../../constants";
 
 export default function(state = "", action) {
   switch (action.type) {
@@ -17,6 +17,8 @@ export default function(state = "", action) {
         default:
           return state;
       }
+    case CLEAR:
+      return "";
     default:
       return state;
   }

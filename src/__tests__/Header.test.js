@@ -17,4 +17,12 @@ describe("Header", () => {
       expect(handleSelectOption).toHaveBeenCalledTimes(4);
     });
   });
+  describe("Clear button", () => {
+    it("should execute clearEditor", () => {
+      const clearEditor = jest.fn();
+      const wrapper = shallow(<Header onclear={clearEditor} />);
+      wrapper.find(".clear-btn").simulate("click");
+      expect(clearEditor).toHaveBeenCalledTimes(1);
+    });
+  });
 });

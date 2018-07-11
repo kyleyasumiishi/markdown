@@ -9,7 +9,9 @@ const Header = props => {
       <div className="header-right">
         <ul>
           <li>
-            <button className="clear-btn">Clear</button>
+            <button className="clear-btn" onClick={props.onclear}>
+              Clear
+            </button>
           </li>
           <li>
             <div className="dropdown">
