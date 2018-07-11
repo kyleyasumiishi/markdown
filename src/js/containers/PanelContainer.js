@@ -4,20 +4,27 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { handleTextInput } from "../actions/handleTextInput";
 import { handleMouseDown, handleMouseUp } from "../actions/handlerActions";
+const marked = require("marked");
 
 class PanelContainer extends Component {
   constructor(props) {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.convertMarkdownToHTML = this.convertMarkdownToHTML.bind(this);
   }
 
   handleMouseMove(event) {
     if (this.props.isHandlerDragging) {
       const editor = document.getElementById("editor");
       let pointerRelativeXpos = event.clientX;
+      console.log(pointerRelativeXpos);
       editor.style.width = pointerRelativeXpos - 5 + "px";
       editor.style.flexGrow = 0;
     }
+  }
+
+  convertMarkdownToHTML() {
+    return { __html: marked(this.props.output) };
   }
 
   render() {
@@ -27,7 +34,7 @@ class PanelContainer extends Component {
         mousemove={this.handleMouseMove}
         mouseup={this.props.handleMouseUp}
         onchange={this.props.handleTextInput}
-        output={this.props.output}
+        innerHTML={this.convertMarkdownToHTML()}
       />
     );
   }
