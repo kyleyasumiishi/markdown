@@ -21,10 +21,22 @@ const Header = props => {
                 Options
               </button>
               <div className="dropdown-content">
-                <a href="#">Markdown Reference</a>
-                <a href="#">Git Cheat Sheet</a>
-                <a href="#">README template</a>
-                <a href="#">This project's README</a>
+                <a
+                  id="markdown-reference"
+                  href="#"
+                  onClick={props.onselectoption}
+                >
+                  Markdown Reference
+                </a>
+                <a id="git-cheat-sheet" href="#" onClick={props.onselectoption}>
+                  Git Cheat Sheet
+                </a>
+                <a id="readme-template" href="#" onClick={props.onselectoption}>
+                  README template
+                </a>
+                <a id="project-readme" href="#" onClick={props.onselectoption}>
+                  This project's README
+                </a>
               </div>
             </div>
           </li>

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { handleOptionSelect } from "../actions/handleOptionSelect";
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -23,18 +26,28 @@ class HeaderContainer extends Component {
     }
   }
 
-  // // When user chooses an Option or Theme
-  // handleOnClick(event) {
-
-  // }
-
   render() {
     return (
       <div>
-        <Header onbuttonclick={this.handleButtonClick} />
+        <Header
+          onbuttonclick={this.handleButtonClick}
+          onselectoption={this.props.handleOptionSelect}
+        />
       </div>
     );
   }
 }
 
-export default HeaderContainer;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    {
+      handleOptionSelect: handleOptionSelect
+    },
+    dispatch
+  );
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(HeaderContainer);

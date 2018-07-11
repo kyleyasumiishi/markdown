@@ -35,6 +35,7 @@ class PanelContainer extends Component {
         mouseup={this.props.handleMouseUp}
         onchange={this.props.handleTextInput}
         innerHTML={this.convertMarkdownToHTML()}
+        output={this.props.output}
       />
     );
   }

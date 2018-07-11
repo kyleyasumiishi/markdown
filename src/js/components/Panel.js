@@ -12,11 +12,8 @@ const Panel = props => {
         <div className="panel-heading">Editor</div>
         <textarea
           className="editor-text"
-          // onChange={event => {
-          //   props.onchange(event);
-          //   props.output();
-          // }}
           onChange={props.onchange}
+          value={props.output}
         />
       </div>
       <div className="handler" onMouseDown={props.mousedown} />
