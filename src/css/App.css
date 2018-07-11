@@ -93,9 +93,9 @@ button:hover {
 
 .panel {
   text-align: center;
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   box-sizing: border-box;
-  min-width: 150px;
+  min-width: 10vw;
 }
 
 .panel-heading {
@@ -115,6 +115,8 @@ button:hover {
 #editor {
   background-color: #889e86;
   color: #232329;
+  flex: 1 0 auto;
+  max-width: 85vw;
 }
 
 .editor-text {
@@ -136,6 +138,7 @@ button:hover {
 #previewer {
   background: white;
   color: #232329;
+  flex: 1 1 auto;
 }
 
 .previewer-output {
