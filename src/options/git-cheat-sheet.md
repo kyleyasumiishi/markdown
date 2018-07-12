@@ -46,6 +46,12 @@ Displays the differences between a tracked file in the working directory and the
 
 ### `git commit -m`
 
+Permanently stores changes from the staging area inside the repository, with an optional message describing the changes.
+
+### git log
+
+Displays a listing of previous versions of a project in chronological order. Each version listing contains a 40-character unique identifier (SHA), commit author, time and date of commit, and commit message.
+
 ### `git show HEAD`
 
 ### `git checkout HEAD filename`
