@@ -52,10 +52,18 @@ const Header = props => {
                 Themes
               </button>
               <div className="dropdown-content">
-                <a href="#">Default</a>
-                <a href="#">Space</a>
-                <a href="#">Dogs</a>
-                <a href="#">Retro</a>
+                <a id="default" href="#" onClick={props.onchangetheme}>
+                  Default
+                </a>
+                <a id="space" href="#" onClick={props.onchangetheme}>
+                  Space
+                </a>
+                <a id="dogs" href="#" onClick={props.onchangetheme}>
+                  Dogs
+                </a>
+                <a id="retro" href="#" onClick={props.onchangetheme}>
+                  Retro
+                </a>
               </div>
             </div>
           </li>

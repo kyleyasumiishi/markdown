@@ -25,4 +25,15 @@ describe("Header", () => {
       expect(clearEditor).toHaveBeenCalledTimes(1);
     });
   });
+  describe("Themes dropdown content", () => {
+    it("should execute changeTheme", () => {
+      const changeTheme = jest.fn();
+      const wrapper = shallow(<Header onchangetheme={changeTheme} />);
+      wrapper.find("#default").simulate("click");
+      wrapper.find("#space").simulate("click");
+      wrapper.find("#dogs").simulate("click");
+      wrapper.find("#retro").simulate("click");
+      expect(changeTheme).toHaveBeenCalledTimes(4);
+    });
+  });
 });

@@ -9,6 +9,7 @@ class HeaderContainer extends Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
+    this.changeTheme = this.changeTheme.bind(this);
   }
 
   handleButtonClick(event) {
@@ -27,6 +28,10 @@ class HeaderContainer extends Component {
     }
   }
 
+  changeTheme(event) {
+    console.log("theme changed to", event.target.id);
+  }
+
   render() {
     return (
       <div>
@@ -34,6 +39,7 @@ class HeaderContainer extends Component {
           onbuttonclick={this.handleButtonClick}
           onselectoption={this.props.handleOptionSelect}
           onclear={this.props.clearEditor}
+          onchangetheme={this.changeTheme}
         />
       </div>
     );
