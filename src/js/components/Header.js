@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = props => {
   return (
-    <div className="header">
+    <div className="header" onClick={props.click}>
       <div className="header-left">
         <h1>Markdown Previewer</h1>
       </div>
@@ -15,11 +15,7 @@ const Header = props => {
           </li>
           <li>
             <div className="dropdown">
-              <button
-                className="dropdown-btn"
-                onClick={props.onbuttonclick}
-                href="#"
-              >
+              <button id="options-dropdown" className="dropdown-btn" href="#">
                 Options
               </button>
               <div className="dropdown-content">
@@ -44,11 +40,7 @@ const Header = props => {
           </li>
           <li>
             <div className="dropdown">
-              <button
-                className="dropdown-btn"
-                onClick={props.onbuttonclick}
-                href="#"
-              >
+              <button id="themes-dropdown" className="dropdown-btn" href="#">
                 Themes
               </button>
               <div className="dropdown-content">

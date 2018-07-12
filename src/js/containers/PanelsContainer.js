@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { edit } from "../actions/edit";
 import { handleMouseDown, handleMouseUp } from "../actions/drag";
+import { onClick } from "./onClick";
 const marked = require("marked");
 
 class PanelsContainer extends Component {
@@ -11,13 +12,13 @@ class PanelsContainer extends Component {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.convertMarkdownToHTML = this.convertMarkdownToHTML.bind(this);
+    this.click = this.click.bind(this);
   }
 
   handleMouseMove(event) {
     if (this.props.isHandlerDragging) {
       const editor = document.getElementById("editor");
       let pointerRelativeXpos = event.clientX;
-      console.log(pointerRelativeXpos);
       editor.style.width = pointerRelativeXpos - 5 + "px";
       editor.style.flexGrow = 0;
     }
@@ -27,9 +28,14 @@ class PanelsContainer extends Component {
     return { __html: marked(this.props.input) };
   }
 
+  click(event) {
+    onClick(event);
+  }
+
   render() {
     return (
       <Panels
+        click={this.click}
         mousedown={this.props.handleMouseDown}
         mousemove={this.handleMouseMove}
         mouseup={this.props.handleMouseUp}

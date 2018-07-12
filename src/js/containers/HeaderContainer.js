@@ -10,62 +10,46 @@ import {
   selectDog,
   selectRetro
 } from "../../css/rootVar";
+import { onClick } from "./onClick";
 
 class HeaderContainer extends Component {
   constructor(props) {
     super(props);
-    this.handleButtonClick = this.handleButtonClick.bind(this);
     this.changeTheme = this.changeTheme.bind(this);
-  }
-
-  handleButtonClick(event) {
-    if (event.target.className === "dropdown-btn") {
-      const dropdownContent = event.target.parentNode.querySelector(
-        ".dropdown-content"
-      );
-      if (
-        dropdownContent.style.display === "" ||
-        dropdownContent.style.display === "none"
-      ) {
-        dropdownContent.style.display = "block";
-      } else {
-        dropdownContent.style.display = "none";
-      }
-    }
+    this.click = this.click.bind(this);
   }
 
   changeTheme(event) {
     switch (event.target.id) {
       case "default":
-        console.log("default");
         selectDefault();
         break;
       case "space":
-        console.log("space");
         selectSpace();
         break;
       case "dogs":
-        console.log("dogs");
         selectDog();
         break;
       case "retro":
-        console.log("retro");
         selectRetro();
         break;
       default:
-        console.log("default");
         break;
     }
+  }
+
+  click(event) {
+    onClick(event);
   }
 
   render() {
     return (
       <div>
         <Header
-          onbuttonclick={this.handleButtonClick}
-          onselectoption={this.props.handleOptionSelect}
+          onselectoption={this.props.selectOption}
           onclear={this.props.clearEditor}
           onchangetheme={this.changeTheme}
+          click={this.click}
         />
       </div>
     );
@@ -75,7 +59,7 @@ class HeaderContainer extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      handleOptionSelect: selectOption,
+      selectOption: selectOption,
       clearEditor: clear
     },
     dispatch

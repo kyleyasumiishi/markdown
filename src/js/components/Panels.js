@@ -7,6 +7,7 @@ const Panels = props => {
       className="container"
       onMouseUp={props.mouseup}
       onMouseMove={props.mousemove}
+      onClick={props.click}
     >
       <div id="editor" className="panel">
         <div className="panel-heading">Editor</div>
