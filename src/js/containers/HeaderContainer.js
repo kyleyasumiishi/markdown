@@ -4,7 +4,12 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { selectOption } from "../actions/selectOption";
 import { clear } from "../actions/clear";
-import { selectDefault, selectSpace } from "../../css/rootVar";
+import {
+  selectDefault,
+  selectSpace,
+  selectDog,
+  selectRetro
+} from "../../css/rootVar";
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -41,9 +46,11 @@ class HeaderContainer extends Component {
         break;
       case "dogs":
         console.log("dogs");
+        selectDog();
         break;
       case "retro":
         console.log("retro");
+        selectRetro();
         break;
       default:
         console.log("default");

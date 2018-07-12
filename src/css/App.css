@@ -3,28 +3,14 @@
   --header-background-color: #292323;
   --editor-background-color: #889e86;
   --button-hover-color: #889e86;
-  --previewer-text-color: white;
-  --panel-heading-text-color: #292323;
+  --previewer-background-color: white;
+  --panel-heading-background-color: #292323;
   --header-text-color: white;
   --editor-text-color: black;
   --border-color: lightgray;
   --dropdown-text-color: black;
   --image-url: none;
 }
-
-/* Space Theme */
-/* :root {
-  --header-background-color: #292323;
-  --editor-background-color: transparent;
-  --button-hover-color: #807ac2;
-  --previewer-text-color: white;
-  --panel-heading-text-color: #2e315d;
-  --header-text-color: white;
-  --editor-text-color: white;
-  --border-color: lightgray;
-  --dropdown-text-color: black;
-  --image-url: url("../img/milky-way.jpg");
-} */
 
 html,
 body {
@@ -108,7 +94,7 @@ button:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--panel-heading-text-color);
+  background-color: var(--panel-heading-background-color);
   color: white;
 }
 
@@ -128,7 +114,7 @@ button:hover {
 }
 
 .panel-heading {
-  background-color: var(--panel-heading-text-color);
+  background-color: var(--panel-heading-background-color);
   border: 2px var(--border-color) solid;
   color: var(--header-text-color);
   height: 5%;
@@ -148,7 +134,6 @@ button:hover {
 
 .editor-text {
   background-color: var(--editor-background-color);
-  /* color: var(--panel-heading-text-color); */
   color: var(--editor-text-color);
   display: flex;
   flex-direction: column;
@@ -165,8 +150,8 @@ button:hover {
 }
 
 #previewer {
-  background: var(--previewer-text-color);
-  color: var(--panel-heading-text-color);
+  background: var(--previewer-background-color);
+  color: black;
   flex: 1 1 auto;
 }
 
