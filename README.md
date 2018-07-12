@@ -1,6 +1,27 @@
 # Markdown Previewer
 
-I am in the process of building a markdown previewer with React and Redux.
+Check out this simple [Markdown Previewer] I built with React and Redux!
+
+<p align="center">
+<a href="https://kyleyasumiishi.github.io/markdown
+"><img src="https://gdurl.com/P1Tu" alt="Screenshot of Markdown Previewer with Space theme" width=80% style="border: 1px black solid"></a>
+</p>
+
+I built this as one of the front-end library projects for [freeCodeCamp], which is a fantastic online learning community for web development.
+
+[markdown previewer]: https://kyleyasumiishi.github.io/markdown
+[freecodecamp]: https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer
+
+My goals for building this app included the following:
+
+- Practice building a React/Redux app
+- Start using ESLint
+- Practice unit testing with Jest & Enzyme
+- Learning how to make a dragbar to dynamically resize divs
+- Improving my CSS skills, specifically CSS Flexbox, variables, and the position property
+- Practice wireframing and thinking through user stories before jumping right into coding
+
+Here are my original sketches of what I envisioned this app to look like (So far I've implemented just the desktop version)!
 
 <p align="center">
 <img src="https://gdurl.com/BHe7" alt="Wireframe for desktop view" width="200" height="200">
@@ -8,27 +29,15 @@ I am in the process of building a markdown previewer with React and Redux.
 <img src="https://gdurl.com/EZfX" alt="Wireframe for tablet view" width="200" height="200" style="transform:rotate(90deg)">
 </p>
 
-I'm building this markdown previewer for a few reasons. First, it's one of the front-end library projects for <a href="https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer">freeCodeCamp</a>, which is a fantastic online learning community for web development.
+Some of the key user stories I aimed to implement included:
 
-Second, this markdown previewer will include several built-in templates accessible via a drop-down button, including a Markdown quick reference, a git cheat sheet, a README template, and this repository's README. When I build personal projects for online courses like this, I like to add a personal touch and modify them so I can get practical usage from them. By adding templates that I can reference in the future, I'll be building a project that will solve an actual problem I face.
-
-My third reason for building this project is to gain more experience using new web development technologies. Specifically, in this project I want to incorporate the following technologies and figure out how to solve the following problems:
-
-- React & Redux
-- ESLint
-- Unit Testing with Jest & Enzyme
-- Media queries for responsiveness based on device width (i.e., desktop, tablet, mobile)
-- Making a dragbar to resize divs
-- Button to copy text to a clipboard
-- Using CSS to add scrollbars to the side of divs
-
-Additional User Stories:
-
-- Themes with semi-transparent background images and different color schemes
+- A dragbar that dynamically resized divs
+- Several pre-built templates/options, such as a Markdown reference, Git cheat sheet, and README template (I wanted to add practicality to this app by including pre-built templates I would reference in the future)
+- Themes with various background images and color schemes
 
 ## About
 
-I'm building this markdown previewer application as one of freeCodeCamp's front-end libraries projects.
+I built this markdown previewer application as one of freeCodeCamp's front-end libraries projects.
 
 freeCodeCamp is a non-profit organization that consists of an interactive learning web platform, an online community forum, chat rooms, Medium publications and local organizations that intend to make learning web development accessible to anyone.
 
@@ -83,8 +92,11 @@ Here are a few <em>new concepts</em> I learned and practiced by creating this Re
 
 - ESLint and Prettier
 - Creating a dragbar to dynamically resize HTML elements
-- Redux
+- State management with Redux
 - Separating presentational and container components in React
+- Updating CSS variables with JavaScript based on the state of a React application
+- Markdown purpose and syntax
+- CSS Flexbox
 
 ## Technologies Used
 
@@ -101,13 +113,9 @@ Here are a few <em>new concepts</em> I learned and practiced by creating this Re
 - Enzyme
 - ESLint
 
-## License
-
 ## Authors
 
 - **Kyle Yasumiishi** - https://github.com/kyleyasumiishi
-
-## Acknowledgements
 
 ## Thank You
 
