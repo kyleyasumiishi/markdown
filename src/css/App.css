@@ -122,7 +122,9 @@ button:hover {
   height: 5%;
   box-sizing: border-box;
   min-height: 28px;
-  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .panel-heading::selection {
