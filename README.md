@@ -4,7 +4,7 @@ Check out this simple [Markdown Previewer] I built with React and Redux!
 
 <p align="center">
 <a href="https://kyleyasumiishi.github.io/markdown
-"><img src="https://gdurl.com/P1Tu" alt="Screenshot of Markdown Previewer with Space theme" width=80% style="border: 1px black solid"></a>
+"><img src="https://gdurl.com/P1Tu" alt="Screenshot of Markdown Previewer with Space theme" style="border: 1px black solid; width: 80%;"></a>
 </p>
 
 I built this as one of the front-end library projects for [freeCodeCamp], which is a fantastic online learning community for web development.
