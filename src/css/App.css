@@ -35,6 +35,9 @@ body {
 .header-left,
 .header-right {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-left h1 {
@@ -52,7 +55,6 @@ body {
   list-style-type: none;
   display: inline-block;
   margin-right: 40px;
-  padding-top: 10px;
 }
 
 /* Modified drop-down navbar code from W3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
