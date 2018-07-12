@@ -48,13 +48,17 @@ Displays the differences between a tracked file in the working directory and the
 
 Permanently stores changes from the staging area inside the repository, with an optional message describing the changes.
 
-### git log
+### `git log`
 
 Displays a listing of previous versions of a project in chronological order. Each version listing contains a 40-character unique identifier (SHA), commit author, time and date of commit, and commit message.
 
 ### `git show HEAD`
 
+Displays the HEAD commit, which is the commit you are currently on.
+
 ### `git checkout HEAD filename`
+
+Restores a file in the working directory to the state it was in when you last made a commit.
 
 ### `git reset HEAD filename`
 
