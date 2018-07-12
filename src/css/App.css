@@ -30,6 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   white-space: nowrap;
+  font-family: "Acme", sans-serif;
 }
 
 .header-left,
@@ -125,6 +126,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Acme", sans-serif;
 }
 
 .panel-heading::selection {
