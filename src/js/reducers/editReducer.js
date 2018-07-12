@@ -2,6 +2,7 @@ import { UPDATE_TEXT, UPDATE_OPTION, CLEAR } from "../../constants";
 import { GIT_CHEAT_SHEET } from "../../options/git-cheat-sheet";
 import { MARKDOWN_REFERENCE } from "../../options/markdown-reference";
 import { README_TEMPLATE } from "../../options/readme-template";
+import { PROJECT_README } from "../../options/project-readme";
 
 export default function(state = "", action) {
   switch (action.type) {
@@ -16,7 +17,7 @@ export default function(state = "", action) {
         case "readme-template":
           return README_TEMPLATE;
         case "project-readme":
-          return "project-readme";
+          return PROJECT_README;
         default:
           return state;
       }
