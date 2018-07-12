@@ -1,10 +1,29 @@
+/* Default Theme */
 :root {
-  --header-color: #292323;
-  --editor-color: #889e86;
-  --panel-heading-color: #232329;
-  --text-color: white;
+  --header-background-color: #292323;
+  --editor-background-color: #889e86;
+  --button-hover-color: #889e86;
+  --previewer-text-color: white;
+  --panel-heading-text-color: #292323;
+  --header-text-color: white;
+  --editor-text-color: white;
   --border-color: lightgray;
-  --dropdown-color: black;
+  --dropdown-text-color: black;
+  --image-url: none;
+}
+
+/* Space Theme */
+:root {
+  --header-background-color: #292323;
+  --editor-background-color: transparent;
+  --button-hover-color: #807ac2;
+  --previewer-text-color: white;
+  --panel-heading-text-color: #2e315d;
+  --header-text-color: white;
+  --editor-text-color: white;
+  --border-color: lightgray;
+  --dropdown-text-color: black;
+  --image-url: url("../img/milky-way.jpg");
 }
 
 html,
@@ -16,8 +35,8 @@ body {
 
 .header {
   margin: 0;
-  background: var(--header-color);
-  color: var(--text-color);
+  background: var(--header-background-color);
+  color: var(--header-text-color);
   text-align: center;
   width: 100%;
   height: 7vh;
@@ -63,7 +82,7 @@ button {
 }
 
 button:hover {
-  color: var(--editor-color);
+  color: var(--button-hover-color);
 }
 
 .clear-btn {
@@ -83,21 +102,23 @@ button:hover {
   text-decoration: none;
   display: block;
   float: none;
-  color: var(--dropdown-color);
+  color: var(--dropdown-text-color);
   text-align: left;
   padding: 5px;
 }
 
 .dropdown-content a:hover {
-  background-color: var(--panel-heading-color);
+  background-color: var(--panel-heading-text-color);
   color: white;
 }
 
 .container {
-  background: var(--border-color);
+  background-color: var(--border-color);
   width: 100%;
   height: 93vh;
   display: flex;
+  background-image: var(--image-url);
+  background-size: 100% 100%;
 }
 
 .panel {
@@ -107,9 +128,9 @@ button:hover {
 }
 
 .panel-heading {
-  background-color: var(--header-color);
+  background-color: var(--panel-heading-text-color);
   border: 2px var(--border-color) solid;
-  color: var(--text-color);
+  color: var(--header-text-color);
   height: 5%;
   box-sizing: border-box;
   min-height: 28px;
@@ -121,19 +142,19 @@ button:hover {
 }
 
 #editor {
-  background-color: var(--editor-color);
-  color: var(--panel-heading-color);
   flex: 1 0 auto;
   max-width: 85vw;
 }
 
 .editor-text {
+  background-color: var(--editor-background-color);
+  /* color: var(--panel-heading-text-color); */
+  color: var(--editor-text-color);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   height: 95%;
   width: 100%;
-  background-color: inherit;
   resize: none;
   font-size: 1rem;
 }
@@ -144,8 +165,8 @@ button:hover {
 }
 
 #previewer {
-  background: var(--text-color);
-  color: var(--panel-heading-color);
+  background: var(--previewer-text-color);
+  color: var(--panel-heading-text-color);
   flex: 1 1 auto;
 }
 
@@ -159,7 +180,7 @@ button:hover {
 }
 
 .handler {
-  background-color: var(--header-color);
+  background-color: var(--header-background-color);
   width: 10px;
   flex: 0 0 auto;
   cursor: col-resize;
