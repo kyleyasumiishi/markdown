@@ -6,14 +6,14 @@
   --previewer-text-color: white;
   --panel-heading-text-color: #292323;
   --header-text-color: white;
-  --editor-text-color: white;
+  --editor-text-color: black;
   --border-color: lightgray;
   --dropdown-text-color: black;
   --image-url: none;
 }
 
 /* Space Theme */
-:root {
+/* :root {
   --header-background-color: #292323;
   --editor-background-color: transparent;
   --button-hover-color: #807ac2;
@@ -24,7 +24,7 @@
   --border-color: lightgray;
   --dropdown-text-color: black;
   --image-url: url("../img/milky-way.jpg");
-}
+} */
 
 html,
 body {

@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { selectOption } from "../actions/selectOption";
 import { clear } from "../actions/clear";
+import { selectDefault, selectSpace } from "../../css/rootVar";
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -29,7 +30,25 @@ class HeaderContainer extends Component {
   }
 
   changeTheme(event) {
-    console.log("theme changed to", event.target.id);
+    switch (event.target.id) {
+      case "default":
+        console.log("default");
+        selectDefault();
+        break;
+      case "space":
+        console.log("space");
+        selectSpace();
+        break;
+      case "dogs":
+        console.log("dogs");
+        break;
+      case "retro":
+        console.log("retro");
+        break;
+      default:
+        console.log("default");
+        break;
+    }
   }
 
   render() {
