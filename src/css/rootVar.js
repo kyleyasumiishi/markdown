@@ -26,26 +26,26 @@ const rootVariables = {
   ]
 };
 
-function setProperty(idx) {
-  for (let property in rootVariables) {
-    if (rootVariables.hasOwnProperty(property)) {
-      const value = rootVariables[property][idx];
-      document.documentElement.style.setProperty(property, value);
+function updateRootVariables(idx) {
+  for (let variable in rootVariables) {
+    if (rootVariables.hasOwnProperty(variable)) {
+      const value = rootVariables[variable][idx];
+      document.documentElement.style.setProperty(variable, value);
     }
   }
 }
 
 export function selectDefault() {
-  setProperty(0);
+  updateRootVariables(0);
 }
 
 export function selectSpace() {
-  setProperty(1);
+  updateRootVariables(1);
 }
 
 export function selectDog() {
-  setProperty(2);
+  updateRootVariables(2);
 }
 export function selectRetro() {
-  setProperty(3);
+  updateRootVariables(3);
 }
