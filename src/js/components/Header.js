@@ -2,14 +2,14 @@ import React from "react";
 
 const Header = props => {
   return (
-    <div className="header" onClick={props.click}>
+    <div className="header" onClick={props.clearDropdown}>
       <div className="header-left">
         <h1>Markdown Previewer</h1>
       </div>
       <div className="header-right">
         <ul>
           <li>
-            <button className="clear-btn" onClick={props.onclear}>
+            <button className="clear-btn" onClick={props.clearEditor}>
               Clear
             </button>
           </li>
@@ -22,17 +22,17 @@ const Header = props => {
                 <a
                   id="markdown-reference"
                   href="#"
-                  onClick={props.onselectoption}
+                  onClick={props.selectOption}
                 >
                   Markdown Reference
                 </a>
-                <a id="git-cheat-sheet" href="#" onClick={props.onselectoption}>
+                <a id="git-cheat-sheet" href="#" onClick={props.selectOption}>
                   Git Cheat Sheet
                 </a>
-                <a id="readme-template" href="#" onClick={props.onselectoption}>
+                <a id="readme-template" href="#" onClick={props.selectOption}>
                   README template
                 </a>
-                <a id="project-readme" href="#" onClick={props.onselectoption}>
+                <a id="project-readme" href="#" onClick={props.selectOption}>
                   This project's README
                 </a>
               </div>
@@ -44,16 +44,16 @@ const Header = props => {
                 Themes
               </button>
               <div className="dropdown-content">
-                <a id="default" href="#" onClick={props.onchangetheme}>
+                <a id="default" href="#" onClick={props.selectTheme}>
                   Default
                 </a>
-                <a id="space" href="#" onClick={props.onchangetheme}>
+                <a id="space" href="#" onClick={props.selectTheme}>
                   Space
                 </a>
-                <a id="dogs" href="#" onClick={props.onchangetheme}>
+                <a id="dogs" href="#" onClick={props.selectTheme}>
                   Dogs
                 </a>
-                <a id="retro" href="#" onClick={props.onchangetheme}>
+                <a id="retro" href="#" onClick={props.selectTheme}>
                   Retro
                 </a>
               </div>

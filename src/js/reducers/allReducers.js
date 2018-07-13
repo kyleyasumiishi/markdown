@@ -4,7 +4,7 @@ import editReducer from "./editReducer";
 
 const allReducers = combineReducers({
   isHandlerDragging: dragReducer,
-  input: editReducer
+  markdown: editReducer
 });
 
 export default allReducers;

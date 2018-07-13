@@ -9,7 +9,7 @@ describe("Header", () => {
   describe("Options dropdown content", () => {
     it("should execute onSelectOption", () => {
       const handleSelectOption = jest.fn();
-      const wrapper = shallow(<Header onselectoption={handleSelectOption} />);
+      const wrapper = shallow(<Header selectOption={handleSelectOption} />);
       wrapper.find("#markdown-reference").simulate("click");
       wrapper.find("#git-cheat-sheet").simulate("click");
       wrapper.find("#readme-template").simulate("click");
@@ -20,7 +20,7 @@ describe("Header", () => {
   describe("Clear button", () => {
     it("should execute clearEditor", () => {
       const clearEditor = jest.fn();
-      const wrapper = shallow(<Header onclear={clearEditor} />);
+      const wrapper = shallow(<Header clearEditor={clearEditor} />);
       wrapper.find(".clear-btn").simulate("click");
       expect(clearEditor).toHaveBeenCalledTimes(1);
     });
@@ -28,7 +28,7 @@ describe("Header", () => {
   describe("Themes dropdown content", () => {
     it("should execute changeTheme", () => {
       const changeTheme = jest.fn();
-      const wrapper = shallow(<Header onchangetheme={changeTheme} />);
+      const wrapper = shallow(<Header selectTheme={changeTheme} />);
       wrapper.find("#default").simulate("click");
       wrapper.find("#space").simulate("click");
       wrapper.find("#dogs").simulate("click");

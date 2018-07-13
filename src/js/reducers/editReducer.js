@@ -1,4 +1,4 @@
-import { UPDATE_TEXT, UPDATE_OPTION, CLEAR } from "../../constants";
+import { UPDATE_TEXT, UPDATE_OPTION, CLEAR_EDITOR } from "../../constants";
 import { GIT_CHEAT_SHEET } from "../../options/git-cheat-sheet";
 import { MARKDOWN_REFERENCE } from "../../options/markdown-reference";
 import { README_TEMPLATE } from "../../options/readme-template";
@@ -21,7 +21,7 @@ export default function(state = "", action) {
         default:
           return state;
       }
-    case CLEAR:
+    case CLEAR_EDITOR:
       return "";
     default:
       return state;

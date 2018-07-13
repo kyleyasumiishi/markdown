@@ -3,23 +3,23 @@ import Header from "../components/Header";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { selectOption } from "../actions/selectOption";
-import { clear } from "../actions/clear";
+import { clearEditor } from "../actions/clearEditor";
 import {
   selectDefault,
   selectSpace,
   selectDog,
   selectRetro
 } from "../../css/rootVar";
-import { onClick } from "./onClick";
+import { setDropdownVisibility } from "./setDropdownVisibility";
 
 class HeaderContainer extends Component {
   constructor(props) {
     super(props);
-    this.changeTheme = this.changeTheme.bind(this);
-    this.click = this.click.bind(this);
+    this.selectTheme = this.selectTheme.bind(this);
+    this.clearDropdown = this.clearDropdown.bind(this);
   }
 
-  changeTheme(event) {
+  selectTheme(event) {
     switch (event.target.id) {
       case "default":
         selectDefault();
@@ -38,18 +38,18 @@ class HeaderContainer extends Component {
     }
   }
 
-  click(event) {
-    onClick(event);
+  clearDropdown(event) {
+    setDropdownVisibility(event);
   }
 
   render() {
     return (
       <div>
         <Header
-          onselectoption={this.props.selectOption}
-          onclear={this.props.clearEditor}
-          onchangetheme={this.changeTheme}
-          click={this.click}
+          clearEditor={this.props.clearEditor}
+          selectOption={this.props.selectOption}
+          selectTheme={this.selectTheme}
+          clearDropdown={this.clearDropdown}
         />
       </div>
     );
@@ -60,7 +60,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       selectOption: selectOption,
-      clearEditor: clear
+      clearEditor: clearEditor
     },
     dispatch
   );

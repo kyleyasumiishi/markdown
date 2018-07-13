@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Panels from "../components/Panels";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { edit } from "../actions/edit";
+import { editMarkdown } from "../actions/editMarkdown";
 import { handleMouseDown, handleMouseUp } from "../actions/drag";
-import { onClick } from "./onClick";
+import { setDropdownVisibility } from "./setDropdownVisibility";
 const marked = require("marked");
 
 class PanelsContainer extends Component {
@@ -12,7 +12,7 @@ class PanelsContainer extends Component {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.convertMarkdownToHTML = this.convertMarkdownToHTML.bind(this);
-    this.click = this.click.bind(this);
+    this.clearDropdown = this.clearDropdown.bind(this);
   }
 
   handleMouseMove(event) {
@@ -25,23 +25,23 @@ class PanelsContainer extends Component {
   }
 
   convertMarkdownToHTML() {
-    return { __html: marked(this.props.input) };
+    return { __html: marked(this.props.markdown) };
   }
 
-  click(event) {
-    onClick(event);
+  clearDropdown(event) {
+    setDropdownVisibility(event);
   }
 
   render() {
     return (
       <Panels
-        click={this.click}
-        mousedown={this.props.handleMouseDown}
-        mousemove={this.handleMouseMove}
-        mouseup={this.props.handleMouseUp}
-        onchange={this.props.handleTextInput}
-        innerHTML={this.convertMarkdownToHTML()}
-        input={this.props.input}
+        clearDropdown={this.clearDropdown}
+        handleMouseDown={this.props.handleMouseDown}
+        handleMouseMove={this.handleMouseMove}
+        handleMouseUp={this.props.handleMouseUp}
+        editMarkdown={this.props.editMarkdown}
+        markdown={this.props.markdown}
+        html={this.convertMarkdownToHTML()}
       />
     );
   }
@@ -50,7 +50,7 @@ class PanelsContainer extends Component {
 function mapStateToProps(state) {
   return {
     isHandlerDragging: state.isHandlerDragging,
-    input: state.input
+    markdown: state.markdown
   };
 }
 
@@ -59,7 +59,7 @@ function mapDispatchToProps(dispatch) {
     {
       handleMouseDown: handleMouseDown,
       handleMouseUp: handleMouseUp,
-      handleTextInput: edit
+      editMarkdown: editMarkdown
     },
     dispatch
   );
