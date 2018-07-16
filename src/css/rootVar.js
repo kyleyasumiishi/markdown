@@ -1,3 +1,7 @@
+import space from "../img/milky-way.jpg";
+import dog from "../img/dog.jpg";
+import retro from "../img/retro.jpg";
+
 const rootVariables = {
   "--header-background-color": ["#292323", "#292323", "#271b12", "#5a4c50"],
   "--editor-background-color": [
@@ -20,9 +24,9 @@ const rootVariables = {
   "--dropdown-text-color": ["black", "black", "black", "black"],
   "--image-url": [
     "none",
-    "url('https://gdurl.com/At-Y')",
-    "url('https://gdurl.com/gDik')",
-    "url('https://gdurl.com/mDXy')"
+    `url(${space})`,
+    `url(${dog})`,
+    `url(${retro})`
   ]
 };
 
